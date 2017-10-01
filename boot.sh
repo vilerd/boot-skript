@@ -1,4 +1,5 @@
 #!/bin/bash
+
 echo -e "\e[1;36m~~~START~~~\e[0m"
 
 apt-get update -y
