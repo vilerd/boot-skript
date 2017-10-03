@@ -45,6 +45,14 @@ sudo debconf-set-selections <<< 'mysql-server-5.7 mysql-server/root_password_aga
 sudo apt-get install -y mysql-server mysql-client
 echo -e "\e[1;32mInstall MySQL_pass1993\e[0m"
 
+mysql -u root -p1993 <<EOF
+CREATE DATABASE wordpress;
+CREATE USER wordpressuser@localhost IDENTIFIED BY '1993';
+FLUSH PRIVILEGES;
+EOF
+echo -e "\e[1;32mDatabase WordPress created\e[0m"
+echo -e "\e[1;34mDB USER=vilerd PASS=1993\e[0m"
+
 
 rm -r /tmp/boot
 echo -e "\e[1;31mGarage remove\e[0m"
