@@ -2,6 +2,16 @@
 
 echo -e "\e[1;36m~~~START~~~\e[0m"
 
+ADDRESS="www.google.ru"
+if ping -c 1 -s 1 -W 1 $ADDRESS
+then
+echo -e "\e[1;32mConnection OK!\e[0m"
+else
+echo -e "\e[1;31mConnection Lost!!!\e[0m"
+echo -e "\e[1;33mCheck network connection!\e[0m"
+exit
+fi
+
 apt-get update -y
 apt-get upgrade -y
 echo -e "\e[1;32mSystem updated\e[0m"
