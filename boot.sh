@@ -53,7 +53,8 @@ echo -e "\e[1;32mInstall ntp\e[0m"
 sudo debconf-set-selections <<< 'mysql-server-5.7 mysql-server/root_password password 1993'
 sudo debconf-set-selections <<< 'mysql-server-5.7 mysql-server/root_password_again password 1993'
 sudo apt-get install -y mysql-server mysql-client
-echo -e "\e[1;32mInstall MySQL_pass1993\e[0m"
+echo -e "\e[1;32mInstall MySQL\e[0m"
+echo -e "\e[1;34mPASS=1993\e[0m"
 
 mysql -u root -p1993 <<EOF
 CREATE DATABASE wordpress;
