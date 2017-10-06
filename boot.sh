@@ -7,7 +7,7 @@ echo -e "\e[1;34mLogging is performed in /tmp/bootlog/logboot.txt\e[0m"
 echo "Start" >> /tmp/bootlog/logboot.txt
 echo -e "\e[1;32mDirectory for logging created!\e[0m"
 
-ADDRESS="www.google.ru"
+ADDRESS="www.google.ua"
 if ping -c 1 -s 1 -W 1 $ADDRESS
 then
 echo -e "\e[1;32mConnection OK!\e[0m"
