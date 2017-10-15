@@ -63,7 +63,7 @@ sudo apt-get install ntp -y
 echo -e "\e[1;32mInstall ntp\e[0m"
 echo "Install ntp" >> /tmp/bootlog/logboot.txt
 
-sudo apt install curl
+sudo apt install curl -y
 echo -e "\e[1;32mInstall curl\e[0m"
 echo "Install curl" >> /tmp/bootlog/logboot.txt
 
