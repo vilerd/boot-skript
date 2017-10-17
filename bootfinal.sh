@@ -141,5 +141,5 @@ echo -e "\e[1;31mGarage remove\e[0m"
 echo "Garage remove" >> /tmp/bootlog/logboot.txt
 
 echo "Created by ~Vilerd~ with ~Alex~ support | Version 1.0.1" >> /tmp/bootlog/logboot.txt
-echo -e "\e[1;33mCreated by ~Vilerd~ with ~Alex~ support | Version 1.1\e[0m"
+echo -e "\e[1;33mCreated by ~Vilerd~ | Version 1.1\e[0m"
 echo -e "\e[1;33m~~~BYE~~~\e[0m"
