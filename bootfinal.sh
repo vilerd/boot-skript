@@ -1,5 +1,6 @@
 #!/bin/bash
 
+echo -e "\e[1;36m~~~The magic begins~~~\e[0m"
 echo -e "\e[1;36m~~~START~~~\e[0m"
 echo -e "\e[1;33mVersion 1.0.1\e[0m"
 
