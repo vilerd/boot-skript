@@ -27,6 +27,7 @@ echo "System updated" >> /tmp/bootlog/logboot.txt
 
 sudo apt-get install ssh -y
 sed -i '/Port 22/c\Port 2202' /etc/ssh/sshd_config
+sed -i '/#ListenAddress 0.0.0.0/c\ListenAddress 0.0.0.0' /etc/ssh/sshd_config
 echo -e "\e[1;32mThe SSH package is installed The connection port is specified\e[0m"
 /etc/init.d/ssh restart
 echo "Install SSH Port=22" >> /tmp/bootlog/logboot.txt
