@@ -4,6 +4,7 @@ sudo mkdir /tmp/boot
 sudo wget -P /tmp/boot https://raw.githubusercontent.com/vilerd/boot.sh/master/Hello.txt
 cat /home/vilerd/title.txt
 
+echo "Do you want to install this? (y/N) "
 read item
 case "$item" in
     y|Y) echo -e "\e[1;32mOK!\e[0m"
@@ -17,7 +18,7 @@ esac
 
 echo -e "\e[1;36m~~~The magic begins~~~\e[0m"
 echo -e "\e[1;36m~~~START~~~\e[0m"
-echo -e "\e[1;33mVersion 1.3\e[0m"
+echo -e "\e[1;33mVersion 1.4\e[0m"
 
 sudo mkdir /tmp/bootlog
 echo -e "\e[1;34mLogging is performed in /tmp/bootlog/logboot.txt\e[0m"
@@ -163,6 +164,6 @@ rm -r /tmp/boot
 echo -e "\e[1;31mGarage remove\e[0m"
 echo "Garage remove" >> /tmp/bootlog/logboot.txt
 
-echo "Created by ~Vilerd~  | Version 1.3" >> /tmp/bootlog/logboot.txt
+echo "Created by ~Vilerd~  | Version 1.4" >> /tmp/bootlog/logboot.txt
 echo -e "\e[1;33mCreated by ~Vilerd~ | Version 1.3\e[0m"
 echo -e "\e[1;33m~~~BYE~~~\e[0m"
