@@ -1,5 +1,20 @@
 #!/bin/bash
 
+sudo mkdir /tmp/boot
+sudo wget -P /tmp/boot https://raw.githubusercontent.com/vilerd/boot.sh/master/Hello.txt
+cat /home/vilerd/title.txt
+
+read item
+case "$item" in
+    y|Y) echo -e "\e[1;32mOK!\e[0m"
+        ;;
+    n|N) echo -e "\e[1;31mGoodbye!\e[0m" && exit
+        exit 0
+        ;;
+    *) echo -e "\e[1;31mError!!! Incorrect choice! Try again!\e[0m" && exit
+        ;;
+esac
+
 echo -e "\e[1;36m~~~The magic begins~~~\e[0m"
 echo -e "\e[1;36m~~~START~~~\e[0m"
 echo -e "\e[1;33mVersion 1.3\e[0m"
@@ -32,7 +47,6 @@ echo -e "\e[1;32mThe SSH package is installed The connection port is specified\e
 /etc/init.d/ssh restart
 echo "Install SSH Port=22" >> /tmp/bootlog/logboot.txt
 
-sudo mkdir /tmp/boot
 sudo wget -P /tmp/boot https://raw.githubusercontent.com/vilerd/boot.sh/master/demonforiptables
 sudo mv /tmp/boot/demonforiptables /etc/init.d/iptables
 sudo chmod +x /etc/init.d/iptables
