@@ -2,7 +2,7 @@
 
 echo -e "\e[1;36m~~~The magic begins~~~\e[0m"
 echo -e "\e[1;36m~~~START~~~\e[0m"
-echo -e "\e[1;33mVersion 1.0.1\e[0m"
+echo -e "\e[1;33mVersion 1.3\e[0m"
 
 sudo mkdir /tmp/bootlog
 echo -e "\e[1;34mLogging is performed in /tmp/bootlog/logboot.txt\e[0m"
@@ -52,6 +52,13 @@ sudo chmod +x /etc/network/if-up.d/iptables-rules
 sudo ls -lA /etc/network/if-up.d/ipt*
 echo -e "\e[1;32mIPtables active\e[0m"
 echo "Iptables active!" >> /tmp/bootlog/logboot.txt
+
+sudo apt-get install fail2ban -y
+wget -P /tmp/boot https://raw.githubusercontent.com/vilerd/boot.sh/master/fail2ban
+mv /tmp/boot/fail2ban /etc/fail2ban/jail.local
+/etc/init.d/fail2ban restart
+echo -e "\e[1;32mFail2ban istall\e[0m"
+echo "Fail2ban install | Fail2ban active!" >> /tmp/bootlog/logboot.txt
 
 sudo apt-get install vim -y
 echo -e "\e[1;32mInstall vim\e[0m"
@@ -142,6 +149,6 @@ rm -r /tmp/boot
 echo -e "\e[1;31mGarage remove\e[0m"
 echo "Garage remove" >> /tmp/bootlog/logboot.txt
 
-echo "Created by ~Vilerd~  | Version 1.0.1" >> /tmp/bootlog/logboot.txt
-echo -e "\e[1;33mCreated by ~Vilerd~ | Version 1.1\e[0m"
+echo "Created by ~Vilerd~  | Version 1.3" >> /tmp/bootlog/logboot.txt
+echo -e "\e[1;33mCreated by ~Vilerd~ | Version 1.3\e[0m"
 echo -e "\e[1;33m~~~BYE~~~\e[0m"
