@@ -164,6 +164,6 @@ rm -r /tmp/boot
 echo -e "\e[1;31mGarage remove\e[0m"
 echo "Garage remove" >> /tmp/bootlog/logboot.txt
 
-echo "Created by ~Vilerd~  | Version 1.4" >> /tmp/bootlog/logboot.txt
+echo "Created by ~vilerd©~  | Version 1.4" >> /tmp/bootlog/logboot.txt
 echo -e "\e[1;33mCreated by ~Vilerd~ | Version 1.3\e[0m"
 echo -e "\e[1;33m~~~BYE~~~\e[0m"
